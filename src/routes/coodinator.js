@@ -1,6 +1,9 @@
-export const goToHome = (history) => {
-  history.push("/home");
+export const goToHome = (navigate) => {
+  navigate("/");
 };
-export const goToQuiz = (history) => {
-  history.push("/perguntas");
+export const goToQuiz = (navigate) => {
+  navigate("/perguntas");
+};
+export const goToStartGame = (navigate) => {
+  navigate("/startgame");
 };

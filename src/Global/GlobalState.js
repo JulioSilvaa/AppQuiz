@@ -7,21 +7,26 @@ export const GlobalState = (props) => {
 
   const getAllQuestions = () => {
     axios
-      .get("https://opentdb.com/api.php?amount=10")
+      .get("https://opentdb.com/api.php?amount=2")
       .then((res) => {
-        console.log(res);
+        setQuestions(res.data.results);
       })
       .catch((err) => {
-        console.log(err);
+        alert(err.message);
       });
   };
 
- useEffect(()=>{
-   getAllQuestions()
- },[])
+  useEffect(() => {
+    getAllQuestions();
+  }, []);
+
+  const data = {
+    questions,
+    setQuestions,
+  };
 
   return (
-    <GlobalStateContext.Provider value={{}}>
+    <GlobalStateContext.Provider value={data}>
       {props.children}
     </GlobalStateContext.Provider>
   );

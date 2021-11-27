@@ -1,13 +1,15 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { BASE_URL } from "../Constant/constant";
 import GlobalStateContext from "./GlobalStateContext";
 
 export const GlobalState = (props) => {
   const [questions, setQuestions] = useState([]);
+  const [qntQuestions, setQntQuestions] = useState();
 
-  const getAllQuestions = () => {
+  const getAllQuestions = (qntQuestions) => {
     axios
-      .get("https://opentdb.com/api.php?amount=2")
+      .get(`${BASE_URL}${qntQuestions}`)
       .then((res) => {
         setQuestions(res.data.results);
       })
@@ -16,13 +18,12 @@ export const GlobalState = (props) => {
       });
   };
 
-  useEffect(() => {
-    getAllQuestions();
-  }, []);
-
   const data = {
     questions,
+    qntQuestions,
     setQuestions,
+    setQntQuestions,
+    getAllQuestions,
   };
 
   return (

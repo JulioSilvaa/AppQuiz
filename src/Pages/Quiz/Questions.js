@@ -2,11 +2,15 @@ import React, { useContext, useState } from "react";
 import { CardQuestions } from "../../Components/CardQuestions/CardQuestions";
 import { Report } from "../../Components/Report/Report";
 import GlobalStateContext from "../../Global/GlobalStateContext";
+import { goToHome } from './../../routes/coodinator';
+import { useNavigate } from 'react-router-dom';
 
 export const Questions = () => {
+  const navigate = useNavigate()
   const { questions } = useContext(GlobalStateContext);
   const [reportSaved, setReportSaved] = useState([]);
   const [hits, setHits] = useState([]);
+  const reportQuestions = localStorage.setItem("report", JSON.stringify(hits));
 
   const addAnswersTrue = (obj) => {
     const newHit = [
@@ -43,7 +47,6 @@ export const Questions = () => {
     ];
     setHits(newHit);
   };
-  const reportQuestions = localStorage.setItem("report", JSON.stringify(hits));
 
   const mostrarRelatorio = () => {
     setReportSaved(JSON.parse(localStorage.getItem("report")));
@@ -67,8 +70,9 @@ export const Questions = () => {
             />
           );
         })}
-      {cardReport.length === reportSaved.length ? cardReport : ""}
+      {cardReport.length === questions.length ? cardReport : ""}
       <button onClick={mostrarRelatorio}>Confirmar</button>
+      <button onClick={()=>goToHome(navigate)}>Home</button>
     </div>
   );
 };

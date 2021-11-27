@@ -7,3 +7,6 @@ export const goToQuiz = (navigate) => {
 export const goToStartGame = (navigate) => {
   navigate("/startgame");
 };
+export const goToReport = (navigate) => {
+  navigate("/reportarquived");
+};

@@ -15,9 +15,10 @@ export const Router = () => {
           <Route path="perguntas" element={<Questions />} />
           <Route path="startgame" element={<StartGame />} />
           <Route path="reportarquived" element={<ReportArchived />} />
-          <Route component={ErrorPage} />
+          <Route element={<ErrorPage/>} />
         </Routes>
       </BrowserRouter>
     </div>
   );
 };
+  

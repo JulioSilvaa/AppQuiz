@@ -67,9 +67,8 @@ export const Questions = () => {
             />
           );
         })}
+      {cardReport.length === reportSaved.length ? cardReport : ""}
       <button onClick={mostrarRelatorio}>Confirmar</button>
-
-      {cardReport}
     </div>
   );
 };

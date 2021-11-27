@@ -1,5 +1,7 @@
 import React from "react";
-import { ContainerCard } from "./estyleCard";
+import { ContainerCard } from "./styleCard";
+import { Stack } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 export const CardQuestions = ({ item, addAnswersTrue, addAnswersFalse }) => {
   return (
@@ -9,23 +11,28 @@ export const CardQuestions = ({ item, addAnswersTrue, addAnswersFalse }) => {
         <p>Categoria: {item.category}</p>
         <h4>{item.question}</h4>
 
-        <div>
-          <button onClick={() => addAnswersTrue(item)} type="submit">
+        <Stack>
+          <Button
+            variant="contained"
+            onClick={() => addAnswersTrue(item)}
+            type="submit"
+          >
             {item.correct_answer}
-          </button>
+          </Button>
 
           {item.incorrect_answers &&
             item.incorrect_answers.map((res) => {
               return (
-                <button
+                <Button
+                  variant="contained"
                   onClick={() => addAnswersFalse(item, res)}
                   type="submit"
                 >
                   {res}
-                </button>
+                </Button>
               );
             })}
-        </div>
+        </Stack>
       </ContainerCard>
     </>
   );

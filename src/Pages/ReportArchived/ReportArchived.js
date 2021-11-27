@@ -1,18 +1,20 @@
 import React from "react";
+import { ContainerReport } from "./styled";
 
 export const ReportArchived = () => {
   const reportArchived = JSON.parse(localStorage.getItem("report"));
   const MapReport = reportArchived.map((item) => {
     return (
-      <div>
-        sua resposta:{item.answer}
+      <ContainerReport>
+        <h5>Questão:</h5>
+        {item.question}
         <br />
-        Questão:{item.question}
+        <h5>sua resposta:</h5>
+        {item.answer}
         <br />
-        {item.quantity}
         <br />
-        Resposta Correta {item.correct_answer}
-      </div>
+        <h5>Resposta Correta:</h5> {item.correct_answer}
+      </ContainerReport>
     );
   });
 

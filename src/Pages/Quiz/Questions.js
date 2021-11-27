@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import { CardQuestions } from "../../Components/CardQuestions/CardQuestions";
 import { Report } from "../../Components/Report/Report";
 import GlobalStateContext from "../../Global/GlobalStateContext";
-import { goToHome } from './../../routes/coodinator';
-import { useNavigate } from 'react-router-dom';
+import { goToHome } from "./../../routes/coodinator";
+import { useNavigate } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { ButtonsPageQuiz } from "./styled";
 
 export const Questions = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const { questions } = useContext(GlobalStateContext);
   const [reportSaved, setReportSaved] = useState([]);
   const [hits, setHits] = useState([]);
@@ -24,7 +26,7 @@ export const Questions = () => {
         incorrect_answer: obj.incorrect_answers,
       },
     ];
-    setReportSaved(localStorage.setItem("report", JSON.stringify(hits)));
+
     setHits(newHit);
   };
 
@@ -70,9 +72,19 @@ export const Questions = () => {
             />
           );
         })}
+      <ButtonsPageQuiz>
+        <Button variant="contained" onClick={mostrarRelatorio}>
+          Confirmar
+        </Button>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={() => goToHome(navigate)}
+        >
+          Home
+        </Button>
+      </ButtonsPageQuiz>
       {cardReport.length === questions.length ? cardReport : ""}
-      <button onClick={mostrarRelatorio}>Confirmar</button>
-      <button onClick={()=>goToHome(navigate)}>Home</button>
     </div>
   );
 };

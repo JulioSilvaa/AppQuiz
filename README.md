@@ -6,7 +6,7 @@ O projeto **AppQuiz** foi desenvolvido durante o **Um case**, com o intuito de a
 Fotos do projeto
 </h1>
 
-<img align="center" src="./src/Assets/images/Page-Home.png"/>
+<img align="center" src="./src/Assets/images/page-Home.png"/>
 <img align="center" src="./src/Assets/images/Page-Home2.png"/>
 <img align="center" src="./src/Assets/images/inicioJogo.png"/>
 <img align="center" src="./src/Assets/images/perguntas.png"/>
@@ -59,7 +59,7 @@ git clone https://github.com/juliosan-bit/AppQuiz.git
 cd AppQuiz
 
 # Instalar as dependências
-npm install  (para instalar as depências)
+npm install  
 
 # Rodar o projeto
 npm run start

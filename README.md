@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# AppQUIZ
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O projeto **AppQuiz** foi desenvolvido durante o **Um case**, com o intuito de avaliar de forma prática os meu conhecimento.
 
-## Available Scripts
+<h1 align="center">
+Fotos do projeto
+</h1>
 
-In the project directory, you can run:
+<img align="center" src="./src/Assets/images/Page-Home.png"/>
+<img align="center" src="./src/Assets/images/Page-Home2.png"/>
+<img align="center" src="./src/Assets/images/inicioJogo.png"/>
+<img align="center" src="./src/Assets/images/perguntas.png"/>
+<img align="center" src="./src/Assets/images/respostas.png"/>
+<img align="center" src="./src/Assets/images/relatorioSalvo.png"/>
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Índice
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- [Descrição](#-descrição-do-projeto)
+- [Como acessar o projeto](#-como-acessar-o-projeto)
+- [Tecnologias utilizadas](#-tecnologias-utilizadas)
+- [Instalação](#-como-baixar-o-projeto)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🖋 Descrição do projeto
 
-### `npm run build`
+O desafio proposto pelo projeto era desenvolver uma aplicação de um jogo entre perguntas e respostas onde ao final de todas as perguntas respondidas, o usuário pudesse ver um "relatório" das respostas certas e erradas, e ao retornar para a página inicial o usuário tivesse acesso ao último relatório salvo, contendo a resposta correta e a resposta que foi escolhida por ele.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌎 Como acessar o projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Link do Projeto Deploy](https://61a3a1bbf23307110b8c1dd4--infallible-swirles-49f136.netlify.app)
 
-### `npm run eject`
+## 🚀 Tecnologias utilizadas
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+o projeto foi desenvolvido usando as seguintes tecnologias:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [React.js](https://pt-br.reactjs.org/docs/getting-started.html)
+- [Styled-Components](https://styled-components.com/docs)
+- [Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
+- [ContextApi](https://pt-br.reactjs.org/docs/hooks-reference.html#usecontext)
+- [React-router-Dom V6](https://morioh.com/p/1dee5f557fa9)
+- [History](https://www.npmjs.com/package/history)
+- [Axios](https://axios-http.com/docs/intro)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 💾 Como baixar o projeto
 
-## Learn More
+- Primeiro instale o [Git](https://git-scm.com/), [Node.jS](https://nodejs.org/pt-br/download/) + [npm](https://www.npmjs.com/get-npm)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Clonar o repositório
+git clone https://github.com/juliosan-bit/AppQuiz.git
+# Entrar no diretório
+cd AppQuiz
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Instalar as dependências
+npm install  (para instalar as depências)
 
-### Code Splitting
+# Rodar o projeto
+npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com muito empenho e dedicação por - Julio Silva

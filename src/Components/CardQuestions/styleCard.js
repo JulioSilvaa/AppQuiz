@@ -12,7 +12,7 @@ export const ContainerCard = styled.div`
   border-radius: 8px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   background-color: lightblue;
-  max-width: 30%;
+  max-width: 50%;
 
 
   button {

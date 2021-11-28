@@ -28,6 +28,7 @@ export const Questions = () => {
     ];
 
     setHits(newHit);
+    console.log(hits);
   };
 
   const addAnswersFalse = (obj, res) => {
@@ -40,8 +41,7 @@ export const Questions = () => {
       ...hits,
       {
         question: obj.question,
-        category: obj.category,
-        quantity: 1,
+        category: obj.category,       
         answer: filterIncorrectAnswer[0],
         correct_answer: obj.correct_answer,
         incorrect_answer: incorrect_answers,
@@ -58,6 +58,14 @@ export const Questions = () => {
     reportSaved.map((report) => {
       return <Report report={report} />;
     });
+
+
+
+   
+
+
+
+
   return (
     <div>
       <h1>Quiz</h1>

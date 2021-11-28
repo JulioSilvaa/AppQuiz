@@ -12,7 +12,7 @@ export const ContainerReport = styled.div`
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  max-width: 30%;
+  max-width: 50%;
   max-height: 450px;
 
 `;
